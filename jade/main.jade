@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  main
+    article.content
+      header
+          hgroup
+            h1 TemplDevel
+            h2 Template development tool
+      hr
+      pre
+        Dev page: #{page} <br>
+        Dev data: #{JSON.stringify(fake, undefined, 2)}
+    footer
+      |  v #{version}

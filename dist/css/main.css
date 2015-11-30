@@ -1,0 +1,43 @@
+body {
+  background: #eee;
+  font: 14px Impact;
+  color: #383838;
+}
+main {
+  width: 400px;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3 {
+  margin: 10px 0;
+}
+h1 {
+  font-size: 500%;
+  padding: 20px 0;
+}
+h2 {
+  font-size: 200%;
+}
+h3 {
+  font-size: 150%;
+}
+p,
+footer {
+  font: 12px Arial;
+  line-height: 30px;
+  text-align: justify;
+}
+a {
+  color: #888;
+}
+article.content {
+  height: calc(100vh - 80px);
+}
+header {
+  text-align: center;
+}
+footer {
+  height: 50px;
+  text-align: right;
+}
