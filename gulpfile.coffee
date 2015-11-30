@@ -47,10 +47,24 @@ gulp.task 'connect', ->
     livereload: on
     root: './dist'
 
+# gulp.task 'watch', ->
+#   gulp.watch 'jade/*.jade', () -> setTimeout( () -> {gulp.start('jade')}, 300)
+#   gulp.watch 'stylus/*.styl', () -> setTimeout( () -> {gulp.start('stylus')}, 300)
+#   gulp.watch 'fakedata.coffee', () -> setTimeout( () -> {gulp.start('fakedata')}, 300)
+
 gulp.task 'watch', ->
-  gulp.watch 'jade/*.jade', ['jade']
-  gulp.watch 'stylus/*.styl', ['stylus']
-  gulp.watch 'fakedata.coffee', ['fakedata']
+  gulp.watch 'stylus/*.styl', () ->
+        setTimeout( () ->
+            gulp.start('stylus');
+        , 300);
+  gulp.watch 'jade/*.jade', () ->
+        setTimeout( () ->
+            gulp.start('jade');
+        , 300);
+  gulp.watch 'fakedata.coffee', () ->
+        setTimeout( () ->
+            gulp.start('fakedata');
+        , 300);
 
 gulp.task 'default', ['jade', 'stylus', 'connect', 'watch']
 
